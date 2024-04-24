@@ -1,0 +1,117 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+}
+
+body {
+  background-color: hsl(217, 19%, 24%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: white;
+}
+
+.attribution {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.bottomButton, main .pauseBtn, main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.pauseBtnContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  background-color: hsl(217, 19%, 38%);
+  flex-direction: column;
+  justify-content: space-around;
+  min-height: 15rem;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 90%;
+  position: relative;
+  padding-bottom: 3rem;
+  margin-block: 3rem;
+}
+main > .header {
+  font-size: larger;
+  font-weight: 800;
+  color: hsl(150, 100%, 66%);
+}
+main > .body {
+  color: hsl(193, 38%, 86%);
+  font-size: 1.75rem;
+  max-width: 44ch;
+  text-align: center;
+  margin-inline: auto;
+}
+main .pauseBtn {
+  width: 100%;
+  z-index: 3;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  flex-direction: column;
+}
+main .pauseBtn source,
+main .pauseBtn img {
+  display: inline-block;
+  max-width: 100%;
+  width: 100%;
+}
+
+.bottomButton {
+  position: absolute;
+  bottom: -9%;
+  background-color: hsl(150, 100%, 66%);
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+}
+.bottomButton:hover {
+  background-color: #38ff9c;
+  box-shadow: 2px 2px 15px hsl(150, 100%, 66%), -4px 2px 15px hsl(150, 100%, 66%);
+}
+
+.rotate {
+  animation: rotate 0.4s ease-in-out 1;
+}
+
+.bottomButton:disabled {
+  background-color: hsl(193, 38%, 86%);
+  cursor: not-allowed;
+}
+.bottomButton:disabled:hover {
+  box-shadow: 0px 0px white;
+}
+
+@media screen and (min-width: 70px) {
+  main {
+    width: 50%;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

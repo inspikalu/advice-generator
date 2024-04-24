@@ -1,0 +1,79 @@
+@import "config";
+
+main {
+  @extend %flex-center;
+  background-color: $grayish-blue;
+  flex-direction: column;
+  justify-content: space-around;
+  min-height: 15rem;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 90%;
+  position: relative;
+  padding-bottom: 3rem;
+  margin-block: 3rem;
+
+  & > .header {
+    font-size: larger;
+    font-weight: 800;
+    color: $neon-green;
+  }
+
+  & > .body {
+    color: $light-cyan;
+    font-size: 1.75rem;
+    max-width: 44ch;
+    text-align: center;
+    margin-inline: auto;
+  }
+  .pauseBtn {
+    // display: block;
+    width: 100%;
+
+    z-index: 3;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    @extend %flex-center;
+    flex-direction: column;
+    source,
+    img {
+      display: inline-block;
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+}
+
+.bottomButton {
+  position: absolute;
+  bottom: -9%;
+  background-color: $neon-green;
+  padding: 15px;
+  @extend %flex-center;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+
+  &:hover {
+    background-color: darken($color: $neon-green, $amount: 5);
+    box-shadow: 2px 2px 15px $neon-green, -4px 2px 15px $neon-green;
+  }
+}
+
+.rotate {
+  animation: rotate 0.4s ease-in-out 1;
+}
+.bottomButton:disabled {
+  background-color: $light-cyan;
+  cursor: not-allowed;
+  &:hover {
+    box-shadow: 0px 0px white;
+  }
+}
+
+@media screen and (min-width: 70px) {
+  main {
+    width: 50%;
+  }
+}

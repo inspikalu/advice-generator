@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./dist/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./dist/css/index.css" />
+
+    <title>Frontend Mentor | Advice generator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style></style>
+  </head>
+  <body>
+    <main>
+      <div class="header">Advice #<span id="adviceId">117</span></div>
+      <div class="body">
+        <q class="quote" id="quote"
+          >It is easy to sit up and take notice, what's difficult is getting up
+          and taking action</q
+        >
+      </div>
+      <div class="pauseBtnContainer" style="width: 100%; overflow: hidden">
+        <picture class="pauseBtn">
+          <source
+            media="(max-width: 650px)"
+            srcset="./dist/images/pattern-divider-desktop.svg"
+          />
+          <source
+            media="(max-width: 375px)"
+            srcset="./dist/images/pattern-divider-mobile.svg"
+          />
+          <img src="./dist/images/pattern-divider-mobile.svg" alt="Flowers" />
+        </picture>
+      </div>
+
+      <button class="bottomButton">
+        <img src="/dist/images/icon-dice.svg" alt="Dice Icon" />
+      </button>
+    </main>
+    <div class="attribution">
+      Challenge by
+      <a
+        href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Frontend Mentor</a
+      >. Coded by
+      <a
+        href="https://www.twitter.com/inspikalu"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Okereke Clement Kalu</a
+      >.
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
