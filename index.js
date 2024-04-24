@@ -27,6 +27,4 @@ let showQuote = function () {
     });
 };
 
-// window.onload = showQuote;
-
 bottomButton.addEventListener("click", showQuote);
